@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="gray13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textGray</item>
+    </style>
+
+    <style name="black13">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+    <style name="black14bold">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+    <style name="black15Bold">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+    <style name="black17Bold">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+    <style name="black20Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textBlack</item>
+    </style>
+
+    <style name="lightGray13Bold">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/textGray_87</item>
+    </style>
+
+
+</resources>

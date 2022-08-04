@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/priceTitleInclude"
+        layout="@layout/title_layout_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/priceRecyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/announcementAppTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/bg_textview"
+        android:lineSpacingExtra="4dp"
+        android:paddingHorizontal="13dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
+        android:text="본 앱은 통신판매중개자로서 거래 당사자가 아니며, 입점판매자가 등록한 상품정보 및 거래에 대해 책임을 지지 않습니다."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/priceAnnouncementTextView" />
+
+
+    <View
+        android:id="@+id/splitView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/lineGray"
+        app:layout_constraintBottom_toTopOf="@+id/priceSumTextView"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/priceRecyclerView" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/priceRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/splitView"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/priceTitleInclude"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_selected_service" />
+
+
+    <TextView
+        android:id="@+id/priceSumTitleTextView"
+        style="@style/gray13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="총 결제금액"
+        app:layout_constraintBottom_toBottomOf="@+id/priceSumTextView"
+        app:layout_constraintEnd_toStartOf="@+id/priceSumTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toTopOf="@+id/priceSumTextView" />
+
+    <TextView
+        android:id="@+id/priceSumTextView"
+        style="@style/black20Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="24dp"
+        android:text="20,000"
+        app:layout_constraintBottom_toTopOf="@+id/priceAnnouncementTextView"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintStart_toEndOf="@+id/priceSumTitleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/splitView" />
+
+    <TextView
+        android:id="@+id/priceAnnouncementTextView"
+        style="@style/gray13"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="4dp"
+        android:text="고객님의 헤어/네일 상태에 따라 선택한 시술이 불가능하거나 추가 비용이 발생할 수 있습니다."
+        app:layout_constraintBottom_toTopOf="@+id/announcementAppTextView"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/priceSumTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="15dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="15dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
