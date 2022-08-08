@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titleTextView"
         style="@style/black17Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,23 +13,25 @@
         android:layout_marginBottom="17dp"
         android:text="결제하기"
         app:layout_constraintBottom_toTopOf="@id/nameTextInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
         app:layout_constraintHorizontal_bias="0"
-        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameTextInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        style="@style/gray13"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:background="@drawable/bg_edittext"
         android:hint="예약자 이름"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintBottom_toTopOf="@id/phoneNumberInputLayout"
-        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
-        app:layout_constraintStart_toStartOf="@+id/startGuideline"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nameEditText"
@@ -49,6 +50,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/bg_edittext"
         android:hint="휴대폰번호(-제외)"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:layout_constraintBottom_toTopOf="@id/saveCheckBox"
         app:layout_constraintEnd_toStartOf="@+id/endGuideline"
         app:layout_constraintStart_toStartOf="@+id/startGuideline"
@@ -56,9 +59,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phoneNumberTextView"
+            android:inputType="number"
             style="@style/gray13"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginEnd="110dp"
             android:background="@android:color/transparent"
             app:boxBackgroundColor="@android:color/transparent" />
 
@@ -84,6 +89,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/bg_edittext"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
         app:endIconCheckable="true"
         app:endIconDrawable="@drawable/icon_camera"
         app:endIconMode="custom"
@@ -125,8 +132,8 @@
         app:layout_constraintGuide_end="15dp" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/submitPhoneNumber"
+        android:layout_width="81dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
         android:text="인증번호 전송"
